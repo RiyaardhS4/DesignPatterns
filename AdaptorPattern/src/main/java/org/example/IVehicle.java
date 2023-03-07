@@ -12,19 +12,33 @@
  ************************************************************************
  *
  * Author : Riyaardh Adam
- * Created: 2023/03/01 08:17
+ * Created: 2023/03/07 09:04
  *
  ***********************************************************************/
 package org.example;
 
-public class VehicleTarget implements IVehicleTarget {
+/**
+ * Interface that defines the methods available for the concrete class Vehicle.
+ */
+
+public interface IVehicle {
+	/**
+	 * Interface for base method to get the model from the vehicle class.
+	 *
+	 * @return vehicle model
+	 */
+	String getVehicleModel();
+	/**
+	 * Interface for base method to get the make from the vehicle class.
+	 *
+	 * @return vehicle make
+	 */
+	String getVehicleMake();
 
 	/**
-	 * Displays vehicle information from vehicle class.
+	 * Interface for base method to get the vin number from the vehicle class.
 	 *
-	 * @param vehicleData vehicle information in a string format.
+	 * @return vehicle vin number
 	 */
-	public void displayVehicleData(String vehicleData) {
-		System.out.println("Inserting Vehicle Data directly " + vehicleData);
-	}
+	String getVinNumber();
 }

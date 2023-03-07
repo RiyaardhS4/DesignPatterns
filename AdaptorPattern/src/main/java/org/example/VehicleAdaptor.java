@@ -20,32 +20,32 @@ package org.example;
 /**
  * The vehicle adaptor class adapts the Vehicle Target Class to work like a Vehicle Service class .
  */
-public class VehicleAdaptor implements IVehicleTarget {
+public class VehicleAdaptor implements IVehicle {
 
-	private VehicleService service;
+	private String[] vehicleData;
 
 	/**
 	 * Constructor for the Vehicle Adaptor class , will be used to create a instance to the Vehicle service class.
+	 *
 	 * @param service instance of the vehicle service class .
 	 */
-	public VehicleAdaptor(VehicleService service){
-		this.service= service;
+	public VehicleAdaptor(String vehicleData) {
+		this.vehicleData = vehicleData.split("\\|");
 	}
 
-	/**
-	 * Conversion of the Vehicle Target method to work like a Vehicle Service method .
-	 * @param vehicleData vehicle information in a string format.
-	 */
 	@Override
-	public void displayVehicleData(String vehicleData) {
-
-		var vehicleSplit = vehicleData.split("\\|");
-		Vehicle vehicle = new Vehicle();
-		vehicle.setVinNumber(vehicleSplit[0]);
-		vehicle.setVehicleMake(vehicleSplit[1]);
-		vehicle.setVehicleModel(vehicleSplit[2]);
-		service.displayVehicleData(vehicle);
+	public String getVehicleMake() {
+		return vehicleData[1];
 	}
 
+	@Override
+	public String getVehicleModel() {
+		return vehicleData[2];
+	}
+
+	@Override
+	public String getVinNumber() {
+		return vehicleData[1];
+	}
 
 }

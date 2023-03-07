@@ -22,10 +22,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Vehicle  {
+public class Vehicle implements IVehicle  {
 
 	private String vinNumber;
 	private String vehicleMake;
 	private String vehicleModel;
+
+
 
 }

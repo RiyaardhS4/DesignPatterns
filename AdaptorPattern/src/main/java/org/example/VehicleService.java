@@ -17,14 +17,14 @@
  ***********************************************************************/
 package org.example;
 
-public class VehicleService implements IVehicleService {
+public class VehicleService {
 
 	/**
 	 * Displays vehicle information from vehicle class.
 	 *
 	 * @param vehicle vehicle information in vehicle class.
 	 */
-	public void displayVehicleData(Vehicle vehicle){
+	public void displayVehicleData(IVehicle vehicle){
 		System.out.println("Inserting Vehicle Data with \nVIN: "+vehicle.getVinNumber()+" \nMake: "+vehicle.getVehicleMake()+" \nModel: "+vehicle.getVehicleModel());
 	}
 }

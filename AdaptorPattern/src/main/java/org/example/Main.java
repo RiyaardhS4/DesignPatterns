@@ -10,8 +10,10 @@ public class Main {
 
 		VehicleService service = new VehicleService();
 		String vehicle="VIN12345|VW|POLO";
-		IVehicleTarget target = new VehicleAdaptor(service);
-		target.displayVehicleData(vehicle);
+		IVehicle target = new VehicleAdaptor(vehicle);
+		service.displayVehicleData(target);
+
+
 	}
 
 
